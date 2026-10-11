@@ -53,12 +53,13 @@ The same `skills/visual-explainer` folder is used everywhere. Only the wrapper d
 ### Claude Code
 
 ```bash
-# from GitHub (after you push this repo)
-/plugin marketplace add <owner>/visual-explainer
+# from GitHub
+/plugin marketplace add rajeevrajchal/claude-plugin-visual-explainer
 /plugin install visual-explainer@visual-explainer
 
 # or from a local checkout, for one session
-claude --plugin-dir ./visual-explainer
+git clone https://github.com/rajeevrajchal/claude-plugin-visual-explainer
+claude --plugin-dir ./claude-plugin-visual-explainer
 ```
 
 Commands: `/visual-explainer:visualize`, `:architecture`, `:flow`, `:sequence`, `:state`, `:dependencies`, `:preview`, each taking an optional subject. The skill also triggers on its own when an answer calls for it.
@@ -127,7 +128,7 @@ Each command is a few lines that hand a forced diagram type to the same skill ([
 ## Layout
 
 ```
-visual-explainer/
+claude-plugin-visual-explainer/
 ├── plugin.json                    # Agent Plugins v1 manifest (portable)
 ├── .claude-plugin/
 │   ├── plugin.json                # Claude Code / claude.ai / Cowork manifest
