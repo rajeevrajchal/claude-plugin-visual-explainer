@@ -74,7 +74,7 @@ These load the portable [`plugin.json`](plugin.json) + `skills/` layout directly
 
 ```bash
 mkdir -p ~/.agents/skills
-ln -s "$PWD/skills/visual-explainer" ~/.agents/skills/visual-explainer
+ln -s /path/to/claude-plugin-visual-explainer/skills/visual-explainer ~/.agents/skills/visual-explainer
 ```
 
 Invoke explicitly with `$visual-explainer architecture <subject>`, or let Codex pick it up automatically.
@@ -85,7 +85,7 @@ OpenCode reads `~/.agents/skills/`, so the symlink above is enough for the skill
 
 ```bash
 mkdir -p ~/.config/opencode/commands
-ln -s "$PWD"/commands/*.md ~/.config/opencode/commands/
+ln -s /path/to/claude-plugin-visual-explainer/commands/*.md ~/.config/opencode/commands/
 ```
 
 Then use `/architecture`, `/flow` and so on. If your OpenCode version uses a singular `command/` directory, link into that instead.
@@ -169,6 +169,10 @@ The biggest gains are where the model doesn't draw on its own: plans, refactors 
 
 - Automatic use depends on the host choosing to load the skill from its description. In the final eval run it triggered in 14 of 16 eligible runs. It can be missed when the agent goes exploring files first and then answers. If that matters to you, use a command (deterministic) or add the [always-on snippet](adapters/always-on.md).
 - Whether Mermaid renders depends on the client. The skill can't detect that reliably, so it falls back to ASCII when unsure.
+
+## Privacy
+
+The plugin is Markdown instructions only. It runs no code, has no hooks or MCP servers, and collects, stores and sends no data.
 
 ## License
 
