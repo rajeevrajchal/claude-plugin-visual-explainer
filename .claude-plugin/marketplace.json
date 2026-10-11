@@ -1,0 +1,15 @@
+{
+  "name": "visual-explainer",
+  "description": "Visual Explainer: diagrams and change previews for AI coding-agent replies.",
+  "owner": {
+    "name": "rajeevrajchal",
+    "email": "rajeevrajchal12@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "visual-explainer",
+      "source": "./",
+      "description": "Turn complex AI coding-agent responses into diagrams, flows, trees, and architecture maps."
+    }
+  ]
+}

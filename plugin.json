@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "visual-explainer",
+  "version": "0.1.0",
+  "description": "Turn complex AI coding-agent responses into diagrams, flows, trees, and architecture maps.",
+  "author": {
+    "name": "rajeevrajchal",
+    "email": "rajeevrajchal12@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["diagrams", "mermaid", "architecture", "visualization", "agent-skills"]
+}
